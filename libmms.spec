@@ -11,7 +11,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib-devel
 BuildRequires:	libtool
-BuildRequires:	pkgconfig
+BuildRequires:	pkg-config
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
