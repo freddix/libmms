@@ -1,7 +1,7 @@
 Summary:	LibMMS - mms:// and mmsh:// parsing library
 Name:		libmms
 Version:	0.6.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://download.sourceforge.net/libmms/%{name}-%{version}.tar.gz
