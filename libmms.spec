@@ -1,11 +1,11 @@
-Summary:	LibMMS - mms:// and mmsh:// parsing library
+Summary:	MMS stream protocol library
 Name:		libmms
-Version:	0.6.2
-Release:	2
+Version:	0.6.4
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://download.sourceforge.net/libmms/%{name}-%{version}.tar.gz
-# Source0-md5:	9f63aa363deb4874e072a45850161bff
+# Source0-md5:	d6b665b335a6360e000976e770da7691
 URL:		http://sourceforge.net/projects/libmms/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -15,8 +15,7 @@ BuildRequires:	pkg-config
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-LibMMS is mms:// and mmsh:// (Microsoft streaming protocols) parsing
-library.
+MMS stream protocol library.
 
 %package devel
 Summary:	Header files for libmms library
@@ -46,6 +45,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -61,7 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
 %{_includedir}/libmms
 %{_pkgconfigdir}/*.pc
 
